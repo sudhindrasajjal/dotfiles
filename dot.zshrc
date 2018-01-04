@@ -15,14 +15,6 @@ plugins=(zsh-autosuggestions zsh-completions)
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -112,7 +104,7 @@ POWERLEVEL9K_BATTERY_STAGES=($'\u2581 ' $'\u2582 ' $'\u2583 ' $'\u2584 ' $'\u258
 
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-#POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context battery dir vcs)
@@ -138,7 +130,7 @@ alias down="cd ~/Downloads"
 alias ..="cd .."
 alias ....="cd ../.."
 
-alias find="sudo find / -name"
+alias look="sudo find / -name"
 alias search="sudo grep --color -rnw / -e "
 
 export LSCOLORS=""
