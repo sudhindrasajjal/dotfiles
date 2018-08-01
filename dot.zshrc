@@ -135,3 +135,5 @@ alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
 
 alias speedtest="wget -O /dev/null cachefly.cachefly.net/100mb.test"
 export LSCOLORS=""
+
+export PROMPT_COMMAND="history -a; history -n"
