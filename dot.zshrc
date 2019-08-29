@@ -133,7 +133,7 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip custom_wifi_signal ram load background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip ram load background_jobs)
 
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -172,3 +172,11 @@ alias speedtest="wget -O /dev/null cachefly.cachefly.net/100mb.test"
 export LSCOLORS=""
 
 export PROMPT_COMMAND="history -a; history -n"
+
+# added by travis gem
+[ -f /Users/sudhindra.s/.travis/travis.sh ] && source /Users/sudhindra.s/.travis/travis.sh
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
