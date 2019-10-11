@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/sudhindra.s/.oh-my-zsh
+export ZSH=/Users/s.sajjalguddam/.oh-my-zsh
+export LC_ALL=en_US.UTF-8
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-source /Users/sudhindra.s/awesome-terminal-fonts/build/*.sh
+source /Users/s.sajjalguddam/awesome-terminal-fonts/build/*.sh
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(zsh-autosuggestions zsh-completions)
@@ -65,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
+PATH=$PATH:~/Library/Python/2.7/bin
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -91,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
+DEFAULT_USER="sudhindra sajjal"
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="white"
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_FOREGROUND="black"
@@ -111,7 +112,7 @@ zsh_wifi_signal(){
                 [[ $speed -gt 100 ]] && color='%F{black}'
                 [[ $speed -lt 50 ]] && color='%F{red}'
 
-                echo -n "%{$color%}$speed Mbps \uf1eb%{%f%}" # removed char not in my PowerLine font
+                echo -n "%{$color%}$ssid %{$color%}\uf1eb%{%f%}" # removed char not in my PowerLine font
         fi
 }
 
@@ -127,13 +128,13 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="❱ "
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF054%F{073}\uF054%F{109}\uF054%f "
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip ram load background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip vpn_ip custom_wifi_signal ram load background_jobs)
 
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -155,6 +156,7 @@ POWERLEVEL9K_HOME_SUB_ICON=''
 POWERLEVEL9K_FOLDER_ICON=''
 POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_STATUS_CROSS=true
+POWERLEVEL9K_TIME_ICON=""
 
 # Alias
 alias cls="clear"
@@ -162,21 +164,13 @@ alias down="cd ~/Downloads"
 alias ..="cd .."
 alias ....="cd ../.."
 
-alias look="sudo find . -name"
-alias search="sudo grep --color -rnw ./ -e "
-alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
-
+alias look="find . -name"
+alias search="grep --color -rnw ./ -e "
+alias ports="lsof -PiTCP -sTCP:LISTEN"
+alias gc="git -c http.sslVerify=false clone"
+alias git="git -c http.sslVerify=false"
 alias xclip="xclip -selection c"
 
 alias speedtest="wget -O /dev/null cachefly.cachefly.net/100mb.test"
 export LSCOLORS=""
 
-export PROMPT_COMMAND="history -a; history -n"
-
-# added by travis gem
-[ -f /Users/sudhindra.s/.travis/travis.sh ] && source /Users/sudhindra.s/.travis/travis.sh
-
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
