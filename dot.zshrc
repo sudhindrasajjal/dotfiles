@@ -5,61 +5,21 @@
 export ZSH=/Users/s.sajjalguddam/.oh-my-zsh
 export LC_ALL=en_US.UTF-8
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 source /Users/s.sajjalguddam/awesome-terminal-fonts/build/*.sh
-
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-plugins=(zsh-autosuggestions zsh-completions)
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+plugins=(zsh-autosuggestions zsh-completions fast-syntax-highlighting git) 
+autoload -U compinit && compinit
 
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE='nerdfont-complete'
-# CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,28 +30,9 @@ PATH=$PATH:~/Library/Python/2.7/bin
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
 DEFAULT_USER="sudhindra sajjal"
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL="zsh_wifi_signal"
 POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="white"
@@ -112,11 +53,11 @@ zsh_wifi_signal(){
                 [[ $speed -gt 100 ]] && color='%F{black}'
                 [[ $speed -lt 50 ]] && color='%F{red}'
 
-                echo -n "%{$color%}$ssid %{$color%}\uf1eb%{%f%}" # removed char not in my PowerLine font
+                echo -n "%{$color%}$ssid %{$color%}\uf1eb %{%f%}" # removed char not in my PowerLine font
         fi
 }
 
-POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
+POWERLEVEL9K_CONTEXT_TEMPLATE='HAL-9000'
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
 POWERLEVEL9K_BATTERY_CHARGING='yellow'
 POWERLEVEL9K_BATTERY_CHARGED='green'
@@ -134,7 +75,7 @@ POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context battery dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable ip vpn_ip custom_wifi_signal ram load background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time dir_writable wifi custom_wifi_signal ram load background_jobs)
 
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -157,6 +98,8 @@ POWERLEVEL9K_FOLDER_ICON=''
 POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_STATUS_CROSS=true
 POWERLEVEL9K_TIME_ICON=""
+POWERLEVEL9K_PUBLIC_IP_BACKGROUND="green"
+POWERLEVEL9K_PUBLIC_IP_FOREGROUND="black"
 
 # Alias
 alias cls="clear"
@@ -169,8 +112,9 @@ alias search="grep --color -rnw ./ -e "
 alias ports="lsof -PiTCP -sTCP:LISTEN"
 alias gc="git -c http.sslVerify=false clone"
 alias git="git -c http.sslVerify=false"
+alias gch="git checkout"
 alias xclip="xclip -selection c"
 
-alias speedtest="wget -O /dev/null cachefly.cachefly.net/100mb.test"
+alias speedtest="curl -o /dev/null cachefly.cachefly.net/100mb.test"
 export LSCOLORS=""
 
