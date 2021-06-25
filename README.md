@@ -12,7 +12,7 @@ Pre-requisites are:
 * Theme is https://github.com/romkatv/powerlevel10k
 * Auto suggestion plugin https://github.com/zsh-users/zsh-autosuggestions
 * Auto complete plugin https://github.com/zsh-users/zsh-completions
-* Font is [Roboto Mono for Powerline](https://github.com/powerline/fonts) (15pt) + Hack Regular [Nerd Font](https://github.com/ryanoasis/nerd-fonts) (15pt).
+* Font is [Roboto Mono for Powerline](https://github.com/powerline/fonts) (15pt) for ASCII + Hack Regular [Nerd Font](https://github.com/ryanoasis/nerd-fonts) (15pt) for non-ASCII.
 * Color scheme is [Material Design](https://github.com/MartinSeeler/iterm2-material-design)
 * Some fonts https://github.com/gabrielelana/awesome-terminal-fonts
 * Syntax highlighting plugin https://github.com/zdharma/fast-syntax-highlighting
