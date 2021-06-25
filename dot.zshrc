@@ -146,7 +146,6 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 
 # Kubernetes aliases
-alias kubectx="/Users/sudhindrasajjalguddam/temedica/scripts/kubectx"
 alias k="kubectl"
 
 # tabtab source for packages
