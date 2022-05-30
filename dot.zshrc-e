@@ -2,11 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/<YOUR_USER>/.oh-my-zsh
+export ZSH=/Users/sudhindrasajjalguddam/.oh-my-zsh
 export LC_ALL=en_US.UTF-8
 export PATH="/usr/local/opt/terraform@0.12/bin:$PATH"
 
-#source /Users/<YOUR_USER>/awesome-terminal-fonts/build/*.sh
+#source /Users/sudhindrasajjalguddam/awesome-terminal-fonts/build/*.sh
 #zstyle ':completion:*:*:git:*' script ~/.oh-my-zsh/custom/plugins/git-completion.bash
 #fpath=(~/.oh-my-zsh/custom/plugins $fpath)
 
@@ -149,7 +149,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 
 # Kubernetes aliases
-alias kubectx="/Users/<YOUR_USER>/temedica/scripts/kubectx"
+alias kubectx="/Users/sudhindrasajjalguddam/temedica/scripts/kubectx"
 alias k="kubectl"
 
 # Added by serverless binary installer
@@ -159,7 +159,7 @@ export VAULT_ADDR="https://vault.temedica.com"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.oh-my-zsh/custom/plugins/istio-completions/_istioctl
 alias code="/Applications/Visual\ Studio\ Code\ 2.app/contents/Resources/app/bin/code"
-export PATH=/opt/homebrew/bin:/Users/<YOUR_USER>/.serverless/bin:/Users/<YOUR_USER>/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/Users/<YOUR_USER>/.serverless/bin:/Users/<YOUR_USER>/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/Users/<YOUR_USER>/.serverless/bin:/Users/<YOUR_USER>/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/<YOUR_USER>/Library/Python/2.7/bin:/usr/local/opt/fzf/bin:/Users/<YOUR_USER>/Library/Python/2.7/bin:/Users/<YOUR_USER>/Library/Python/2.7/bin
+export PATH=/opt/homebrew/bin:/Users/sudhindrasajjalguddam/.serverless/bin:/Users/sudhindrasajjalguddam/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/Users/sudhindrasajjalguddam/.serverless/bin:/Users/sudhindrasajjalguddam/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/Users/sudhindrasajjalguddam/.serverless/bin:/Users/sudhindrasajjalguddam/Library/Python/3.8/bin:/usr/local/opt/terraform@0.12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/sudhindrasajjalguddam/Library/Python/2.7/bin:/usr/local/opt/fzf/bin:/Users/sudhindrasajjalguddam/Library/Python/2.7/bin:/Users/sudhindrasajjalguddam/Library/Python/2.7/bin
 
 # tabtab source for packages
 # uninstall by removing these lines
