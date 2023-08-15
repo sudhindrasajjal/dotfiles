@@ -25,3 +25,7 @@ Preview
 ![alt text](https://raw.githubusercontent.com/sudhindrasajjal/dotfiles/master/iterm.png)
 
 ![alt text](https://raw.githubusercontent.com/sudhindrasajjal/dotfiles/master/iterm2.png)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sudhindrasajjal/dotfiles&type=Date)](https://star-history.com/#sudhindrasajjal/dotfiles&Date)
